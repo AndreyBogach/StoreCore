@@ -3,3 +3,8 @@ C:\Users\Андрей\Documents\Visual Studio 2015\Projects\StoreCore\StoreCore.
 C:\Users\Андрей\Documents\Visual Studio 2015\Projects\StoreCore\StoreCore.Common\obj\Debug\StoreCore.Common.csprojResolveAssemblyReference.cache
 C:\Users\Андрей\Documents\Visual Studio 2015\Projects\StoreCore\StoreCore.Common\obj\Debug\StoreCore.Common.dll
 C:\Users\Андрей\Documents\Visual Studio 2015\Projects\StoreCore\StoreCore.Common\obj\Debug\StoreCore.Common.pdb
+C:\Users\Андрей\Documents\StoreCore\StoreCore\StoreCore.Common\bin\Debug\StoreCore.Common.dll
+C:\Users\Андрей\Documents\StoreCore\StoreCore\StoreCore.Common\bin\Debug\StoreCore.Common.pdb
+C:\Users\Андрей\Documents\StoreCore\StoreCore\StoreCore.Common\obj\Debug\StoreCore.Common.csprojResolveAssemblyReference.cache
+C:\Users\Андрей\Documents\StoreCore\StoreCore\StoreCore.Common\obj\Debug\StoreCore.Common.dll
+C:\Users\Андрей\Documents\StoreCore\StoreCore\StoreCore.Common\obj\Debug\StoreCore.Common.pdb
