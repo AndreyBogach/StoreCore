@@ -1,0 +1,97 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.main-list > .row{
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.main-list .img-responsive{
+    max-width: 30px;
+    margin: 0 auto;
+}
+
+.add-button{
+    color: #fff;
+    background-color: #54A2B9;
+    border-color: #46b8da;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px){
+
+    .main-list > .row > div{
+        margin-bottom: 15px;
+        text-align: center;
+    }  
+    .main-list img.img-responsive{
+        max-width: 50px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .add-button{
+        display: block;
+        max-width: 200px;
+        margin: 20px auto;
+    }
+}
+
+.title{
+    margin: 30px 0 15px;
+}
+
+.list-header{
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    font-weight: bold;
+}
+
+.close-button span{
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    font-size: 24px;
+    border: 1px solid #eee;
+    padding: 0px 6px;
+    border-radius: 0 5px 0 0;
+    color: #929292;
+    transition: all .3s ease;
+}
+
+.close-button span:hover{
+    color: #656565;
+    border: 1px solid #A0A0A0;
+}
+
+.bordered-form{
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #FFF;
+    padding: 6px 24px;
+}

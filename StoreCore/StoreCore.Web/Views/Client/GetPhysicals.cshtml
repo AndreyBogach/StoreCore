@@ -1,0 +1,61 @@
+﻿@model IEnumerable<StoreCore.Model.Client.PhysicalEntity>
+
+@{
+    ViewBag.Title = "GetPhysicals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel-heading">
+    <h3>Physical clients</h3>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            @Html.ActionLink("Create client", "AddPhysicalClient", new { area = "" }, new { @class = "btn btn-info add-button" })
+        </div>
+    </div>
+</div>
+
+<div class="container main-list">
+    <div class="row list-header hidden-xs">
+        <div class="col-sm-1">Client ID</div>
+        <div class="col-sm-1">Creation date</div>
+        <div class="col-sm-2">Name</div>
+        <div class="col-sm-2">Passport</div>
+        <div class="col-sm-2">Date of birth</div>
+        <div class="col-sm-2">Address</div>
+        <div class="col-sm-2">Action</div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-sm-1">@item.ClientId</div>
+            <div class="col-sm-1">@String.Format("{0:MMM. d, yyyy}", item.CreationDate)</div>
+            <div class="col-sm-2">@item.Name</div>
+            <div class="col-sm-2">@item.PassportNumber</div>
+            <div class="col-sm-2">@String.Format("{0:MMM. d, yyyy}", item.DateOfBirth)</div>
+            <div class="col-sm-2">@item.Address.Country, @item.Address.City, @item.Address.Street, @item.Address.HomeNumber</div>
+            <div class="col-sm-2">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm">Details</button>
+                    <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Меню с переключением</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>@Html.ActionLink("Update", "UpdatePhysicalClient", "Client", new { id = item.ClientId }, null)</li>
+                        <li>@Html.ActionLink("Delete", "DeleteClient", "Client", new { id = item.ClientId }, null)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@using PagedList.Mvc;
+@using PagedList;
+
+<div class="text-center">
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("GetPhysicals", new { page }))
+</div>

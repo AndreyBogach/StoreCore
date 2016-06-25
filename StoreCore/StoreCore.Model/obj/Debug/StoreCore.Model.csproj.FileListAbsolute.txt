@@ -1,0 +1,5 @@
+C:\Users\Андрей\Documents\Visual Studio 2015\Projects\StoreCore\StoreCore.Model\bin\Debug\StoreCore.Model.dll
+C:\Users\Андрей\Documents\Visual Studio 2015\Projects\StoreCore\StoreCore.Model\bin\Debug\StoreCore.Model.pdb
+C:\Users\Андрей\Documents\Visual Studio 2015\Projects\StoreCore\StoreCore.Model\obj\Debug\StoreCore.Model.csprojResolveAssemblyReference.cache
+C:\Users\Андрей\Documents\Visual Studio 2015\Projects\StoreCore\StoreCore.Model\obj\Debug\StoreCore.Model.dll
+C:\Users\Андрей\Documents\Visual Studio 2015\Projects\StoreCore\StoreCore.Model\obj\Debug\StoreCore.Model.pdb

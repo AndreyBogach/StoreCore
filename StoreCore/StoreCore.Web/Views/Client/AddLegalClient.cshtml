@@ -1,0 +1,101 @@
+﻿@model StoreCore.Web.Models.LegalViewModel
+
+@{
+    ViewBag.Title = "Client";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        background: linear-gradient(to right, rgba(33, 32, 32, 0.75), rgba(33, 32, 32, 0.75)), url(/Content/coworking_RTOWN-compressor.jpg) center center no-repeat;
+        background-size: cover;
+    }
+
+    input.form-control, textarea.form-control {
+        min-height: 40px;
+        font-size: 16px;
+    }
+
+    ul.nav.navbar-nav, .head-foot {
+        display: none;
+    }
+
+        ul.nav.navbar-nav.navbar-right {
+            display: block;
+        }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-lg-offset-3 col-lg-6 bordered-form">
+
+            <h1>Legal Client</h1>
+            <hr />
+            <a href="/" class="close-button"><span>&#10006;</span></a>
+
+            @using (Html.BeginForm("AddLegalClient", "Client", new { area = "" }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                
+                <div>
+                    <h4 class="text-info">My Profile</h4>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @required = "required", @placeholder = "Name" })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            @Html.TextBoxFor(m => m.TIN, new { @class = "form-control", @required = "required", @placeholder = "TIN number (12 symbol)" })
+                            @Html.ValidationMessageFor(model => model.TIN, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <hr /> <!-- My Address -->
+
+                <h4 class="text-info">My Address</h4>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        @Html.TextBoxFor(m => m.Country, new { @class = "form-control", @required = "required", @placeholder = "Country" })
+                        @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        @Html.TextBoxFor(m => m.City, new { @class = "form-control", @required = "required", @placeholder = "City" })
+                        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        @Html.TextBoxFor(m => m.Street, new { @class = "form-control", @required = "required", @placeholder = "Street" })
+                        @Html.ValidationMessageFor(model => model.Street, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        @Html.TextBoxFor(m => m.Home, new { @class = "form-control", @required = "required", @placeholder = "Home number" })
+                        @Html.ValidationMessageFor(model => model.Home, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="submit" class="btn btn-primary btn-lg pull-right sign-up-btn" value="Save" style="width: 100%; padding: 10px 12px; margin: 20px 0;">
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
